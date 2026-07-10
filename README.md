@@ -14,6 +14,16 @@ Die Anwendung zeigt alle 24 Parkhäuser des Parkleitsystems Innenstadt (P1–P25
 
 > **Hinweis:** Prototyp-Status – bis zur offiziellen Freigabe ist die Anwendung entsprechend gekennzeichnet (Prototyp-Badge, Disclaimer, `noindex`).
 
+### Screenshots des Prototyps
+<img width="553" height="1130" alt="grafik" src="https://github.com/user-attachments/assets/3615dc19-abd2-4b0b-81d4-acea7a27057e" />
+
+<img width="563" height="1137" alt="grafik" src="https://github.com/user-attachments/assets/5075b305-4a40-4c25-b321-866d669bb694" />
+
+<img width="551" height="1147" alt="grafik" src="https://github.com/user-attachments/assets/6ab28488-773d-48c2-9600-2a3f5771001f" />
+
+
+
+
 ### Built With
 
 The documentation project is built with technologies we use in our projects:
