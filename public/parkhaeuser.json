@@ -1,0 +1,242 @@
+[
+  {
+    "sn": "106521",
+    "ph": "P23",
+    "name": "Car Park Cristal",
+    "adresse": "Schwanthalerstr. 36",
+    "lat": 48.13758,
+    "lon": 11.55911,
+    "kapRef": 220,
+    "url": null
+  },
+  {
+    "sn": "106504",
+    "ph": "P18",
+    "name": "City-Parkhaus am Färbergraben",
+    "adresse": "Färbergraben 10",
+    "lat": 48.1372976,
+    "lon": 11.571501,
+    "kapRef": 350,
+    "url": "https://www.city-parkhaus-muenchen.de"
+  },
+  {
+    "sn": "106508",
+    "ph": "P21",
+    "name": "Hertie-Parkhaus",
+    "adresse": "Schützenstr. 14",
+    "lat": 48.140266759066336,
+    "lon": 11.562168070328472,
+    "kapRef": 504,
+    "url": null
+  },
+  {
+    "sn": "401060",
+    "ph": "P16",
+    "name": "Königshof-Parking",
+    "adresse": "Karlspl. 25",
+    "lat": 48.13976378884862,
+    "lon": 11.564708485019105,
+    "kapRef": 104,
+    "url": "https://parkeninmuenchen.de/parkhaus-koenigshof/"
+  },
+  {
+    "sn": "301236",
+    "ph": "P4",
+    "name": "Marienplatz-Großgarage",
+    "adresse": "Rindermarkt 16",
+    "lat": 48.136227,
+    "lon": 11.574723,
+    "kapRef": 220,
+    "url": "https://www.contipark.de/de/parken/muenchen/tiefgarage-marienplatz/"
+  },
+  {
+    "sn": "106509",
+    "ph": "P22",
+    "name": "Parkgarage Böhringer",
+    "adresse": "Baaderstr. 6",
+    "lat": 48.1330593,
+    "lon": 11.5810631,
+    "kapRef": 150,
+    "url": "http://www.isarparkhaus.de"
+  },
+  {
+    "sn": "106505",
+    "ph": "P5",
+    "name": "Parkgarage Rieger-City",
+    "adresse": "Frauenstr. 38",
+    "lat": 48.1345268,
+    "lon": 11.5806805,
+    "kapRef": 350,
+    "url": "https://www.q-park.de/de-de/staedte/m%C3%BCnchen/rieger-city-isartor/"
+  },
+  {
+    "sn": "106525",
+    "ph": "P11/P25",
+    "name": "Parkhaus am Hauptbahnhof",
+    "adresse": "Arnulfstr. 1",
+    "lat": 48.141043557113,
+    "lon": 11.559701929572,
+    "kapRef": 223,
+    "url": null
+  },
+  {
+    "sn": "401010",
+    "ph": "P15",
+    "name": "Parkhaus am Hofbräuhaus",
+    "adresse": "Hochbrückenstr. 9",
+    "lat": 48.13711490430454,
+    "lon": 11.584083168162554,
+    "kapRef": 449,
+    "url": "https://www.q-park.de/de-de/staedte/m%C3%BCnchen/hofbr%C3%A4uhaus/"
+  },
+  {
+    "sn": "401062",
+    "ph": "P3",
+    "name": "Parkhaus am Salvatorplatz",
+    "adresse": "Salvatorplatz 3",
+    "lat": 48.142269,
+    "lon": 11.57519,
+    "kapRef": 250,
+    "url": "https://www.q-park.de/de-de/staedte/m%C3%BCnchen/salvatorplatz-altstadt/"
+  },
+  {
+    "sn": "106501",
+    "ph": "P19",
+    "name": "Parkhaus am Stachus",
+    "adresse": "Adolf-Kolping-Str. 10",
+    "lat": 48.1381075,
+    "lon": 11.5630355,
+    "kapRef": 390,
+    "url": "https://alpina-parking.com/standort/parkhaus-muenchen-stachus-alpina/"
+  },
+  {
+    "sn": "301277",
+    "ph": "P2",
+    "name": "Parkhaus Elisenhof",
+    "adresse": "Luitpoldstr. 3",
+    "lat": 48.1409303,
+    "lon": 11.5625947,
+    "kapRef": 295,
+    "url": "https://www.q-park.de/de-de/staedte/m%C3%BCnchen/elisenhof-hauptbahnhof/"
+  },
+  {
+    "sn": "301264",
+    "ph": "P10",
+    "name": "Parkhaus Hopfenpost",
+    "adresse": "Hopfenstr. 6",
+    "lat": 48.143337,
+    "lon": 11.554503,
+    "kapRef": 230,
+    "url": "https://www.contipark.de/de/parken/muenchen/tiefgarage-neue-hopfenpost/"
+  },
+  {
+    "sn": "301270",
+    "ph": "P1",
+    "name": "Parkhaus Marsstr. 11",
+    "adresse": "Hirtenstr. 14",
+    "lat": 48.142139,
+    "lon": 11.55854,
+    "kapRef": 526,
+    "url": "https://www.q-park.de/de-de/staedte/m%C3%BCnchen/marsstra%C3%9Fe-hauptbahnhof/"
+  },
+  {
+    "sn": "106524",
+    "ph": "P14",
+    "name": "Parkhaus Oberanger",
+    "adresse": "Oberanger 27",
+    "lat": 48.134029,
+    "lon": 11.569986,
+    "kapRef": 393,
+    "url": "https://www.contipark.de/de/parken/muenchen/tiefgarage-oberanger/"
+  },
+  {
+    "sn": "401055",
+    "ph": "P6",
+    "name": "Parkhaus Schrannenhalle",
+    "adresse": "Prälat-Zistl-Straße 3",
+    "lat": 48.13424935024725,
+    "lon": 11.57395181200344,
+    "kapRef": 147,
+    "url": "https://www.q-park.de/de-de/staedte/m%C3%BCnchen/schrannenhalle-viktualienmarkt/"
+  },
+  {
+    "sn": "401004",
+    "ph": "P24",
+    "name": "PH Hauptbahnhof Süd",
+    "adresse": null,
+    "lat": 48.13857307282762,
+    "lon": 11.560030468152496,
+    "kapRef": 197,
+    "url": null
+  },
+  {
+    "sn": "301234",
+    "ph": "P8",
+    "name": "Pschorr-Garage",
+    "adresse": "Altheimer Eck 16",
+    "lat": 48.137325,
+    "lon": 11.570128,
+    "kapRef": 172,
+    "url": "https://www.q-park.de/de-de/staedte/m%C3%BCnchen/pschorr-garage-altstadt/"
+  },
+  {
+    "sn": "106506",
+    "ph": "P7",
+    "name": "Sonnenhof Parkgarage",
+    "adresse": "Landwehrstr. 10",
+    "lat": 48.1364089,
+    "lon": 11.5632499,
+    "kapRef": 77,
+    "url": "https://www.apcoa.de/einmal-parken/standorte/muenchen/sonnenhof-garage"
+  },
+  {
+    "sn": "106513",
+    "ph": "P20",
+    "name": "TG Hotel Ibis City",
+    "adresse": "Dachauer Str. 21",
+    "lat": 48.14403,
+    "lon": 11.55952,
+    "kapRef": null,
+    "url": null
+  },
+  {
+    "sn": "301271",
+    "ph": "P12",
+    "name": "Tiefgarage am Hauptbahnhof",
+    "adresse": "Bahnhofplatz 2",
+    "lat": 48.14076,
+    "lon": 11.56061,
+    "kapRef": 79,
+    "url": null
+  },
+  {
+    "sn": "301220",
+    "ph": "P9",
+    "name": "Tiefgarage Karstadt Oberpollinger",
+    "adresse": "Neuhauser Str. 18",
+    "lat": 48.138771,
+    "lon": 11.56757,
+    "kapRef": 357,
+    "url": "https://www.oberpollinger.de/services/"
+  },
+  {
+    "sn": "301272",
+    "ph": "P13",
+    "name": "Tiefgarage Stachus Einkaufszentrum",
+    "adresse": "Herzog-Wilhelm-Str. 11",
+    "lat": 48.137601,
+    "lon": 11.5667028,
+    "kapRef": 316,
+    "url": null
+  },
+  {
+    "sn": "106507",
+    "ph": "P17",
+    "name": "Tiefgarage vor der Oper",
+    "adresse": "Max-Joseph-Platz 4",
+    "lat": 48.14049,
+    "lon": 11.57764,
+    "kapRef": 275,
+    "url": "https://www.operngarage.de"
+  }
+]

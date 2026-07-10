@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="description" content="Live-Auslastung der Parkhäuser in der Münchner Innenstadt auf einer Karte – mit freien Plätzen und Routenplanung." />
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#0f4c81" />
+    <meta property="og:title" content="Parken München – Parkhäuser live" />
+    <meta property="og:description" content="Live-Auslastung der Parkhäuser in der Münchner Innenstadt auf einer Karte." />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230f4c81'/%3E%3Ctext x='16' y='23' text-anchor='middle' font-family='Arial,sans-serif' font-size='20' font-weight='bold' fill='%23fff'%3EP%3C/text%3E%3C/svg%3E" />
+    <title>Parken München – Parkhäuser live</title>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <div class="brand-text">
+          <span class="brand-title">Parken München</span>
+          <span class="brand-sub">Parkhäuser Innenstadt · live</span>
+        </div>
+      </div>
+      <div class="header-aktionen">
+        <span class="proto-badge" title="Inoffizieller Prototyp, keine Seite der Landeshauptstadt München">Prototyp</span>
+        <button id="btn-info" type="button" class="info-btn" aria-label="Informationen zu dieser Seite">i</button>
+      </div>
+    </header>
+
+    <main class="app-main" data-ansicht="karte">
+      <div id="map" role="application" aria-label="Karte der Innenstadt-Parkhäuser"></div>
+
+      <div id="liste" class="liste" role="list" aria-label="Parkhäuser sortiert nach freien Plätzen"></div>
+
+      <div class="view-toggle" role="group" aria-label="Ansicht wechseln">
+        <button id="btn-karte" type="button" aria-pressed="true">Karte</button>
+        <button id="btn-liste" type="button" aria-pressed="false">Liste</button>
+      </div>
+
+      <button id="btn-locate" type="button" class="locate-btn" aria-label="Parkhäuser in meiner Nähe finden">
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="7"></circle>
+          <circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none"></circle>
+          <line x1="12" y1="2" x2="12" y2="5"></line>
+          <line x1="12" y1="19" x2="12" y2="22"></line>
+          <line x1="2" y1="12" x2="5" y2="12"></line>
+          <line x1="19" y1="12" x2="22" y2="12"></line>
+        </svg>
+      </button>
+
+      <div class="status-pill" id="status" role="status" aria-live="polite">
+        <span class="status-dot" id="status-dot" aria-hidden="true"></span>
+        <span id="status-text">Lade Live-Daten …</span>
+      </div>
+
+      <aside id="panel" class="panel" role="dialog" aria-label="Parkhaus-Details" aria-hidden="true"></aside>
+    </main>
+
+    <div id="info-overlay" class="info-overlay" hidden>
+      <div class="info-karte" role="dialog" aria-modal="true" aria-labelledby="info-titel">
+        <button id="btn-info-schliessen" type="button" class="panel-schliessen" aria-label="Informationen schließen">×</button>
+        <h2 id="info-titel">Über diese Seite</h2>
+        <p class="info-disclaimer">Unabhängiger Prototyp – keine offizielle Seite der Landeshauptstadt München.</p>
+
+        <h3 class="info-abschnitt">Legende</h3>
+        <ul class="legende">
+          <li><span class="legende-punkt" data-status="gut" aria-hidden="true"></span>Viel frei – mehr als 35 % der Plätze</li>
+          <li><span class="legende-punkt" data-status="knapp" aria-hidden="true"></span>Wird knapp – 12 bis 35 % frei</li>
+          <li><span class="legende-punkt" data-status="voll" aria-hidden="true"></span>Fast voll – weniger als 12 % frei</li>
+          <li><span class="legende-punkt" data-status="offline" aria-hidden="true"></span>Keine Live-Daten – Sensor offline</li>
+        </ul>
+
+        <h3 class="info-abschnitt">Datenquellen</h3>
+        <ul class="quellen">
+          <li>Live-Belegung: <a href="https://pls-muc-z.com/pls/info/parkhaus.html" target="_blank" rel="noopener noreferrer">Parkleitsystem München</a>, automatische Aktualisierung alle 60 Sekunden</li>
+          <li>Standorte &amp; Adressen: Parkraumwende München, <a href="https://data.parkraumwende.de/" target="_blank" rel="noopener noreferrer">data.parkraumwende.de</a>, <a href="https://creativecommons.org/licenses/by/4.0/deed.de" target="_blank" rel="noopener noreferrer">CC BY 4.0</a></li>
+          <li>Karte: <a href="https://openfreemap.org/" target="_blank" rel="noopener noreferrer">OpenFreeMap</a> · © OpenMapTiles · Daten von OpenStreetMap-Mitwirkenden</li>
+        </ul>
+
+        <p class="info-fuss">Impressum und Datenschutzerklärung folgen mit dem offiziellen Betrieb unter parken.muenchen.de.</p>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
