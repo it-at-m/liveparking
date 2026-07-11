@@ -40,11 +40,11 @@ The documentation project is built with technologies we use in our projects:
 * [ ] Impressum & Datenschutzerklärung
 * [ ] Offizielles Corporate Design der Landeshauptstadt München
 
-See the [open issues](#) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/it-at-m/liveparking/issues) for a full list of proposed features (and known issues).
 
 ## Set up
 
-Voraussetzung: Node.js ≥ 16 (getestet mit v17; für aktuellere Vite-Versionen Node ≥ 18).
+Voraussetzung: Node.js ≥ 22.12 (Vite 8; getestet mit v22.23.1). Der Daten-Proxy in `server/` ist dependency-frei und läuft auch mit älteren Node-Versionen.
 
 ```bash
 npm install
