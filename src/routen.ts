@@ -18,5 +18,11 @@ export function routenLinks(standort: Standort): Array<{ name: string; url: stri
       name: "Waze",
       url: `https://waze.com/ul?ll=${ziel}&navigate=yes`,
     },
+    {
+      // Offener Routing-Dienst auf OSRM-Basis (Issue #5); srv=0 = Auto-Profil.
+      // Erstes loc = Start (leer, wählt der Nutzer), zweites loc = Ziel.
+      name: "OpenStreetMap",
+      url: `https://routing.openstreetmap.de/?z=16&center=${encodeURIComponent(ziel)}&loc=&loc=${encodeURIComponent(ziel)}&hl=de&alt=0&srv=0`,
+    },
   ];
 }
