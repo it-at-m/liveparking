@@ -35,7 +35,7 @@ The documentation project is built with technologies we use in our projects:
 
 ## Roadmap
 
-* [ ] Deployment (Vercel / Netlify / Cloudflare Pages) mit Serverless-Wrapper um `server/parser.mjs`
+* [x] Deployment: GitHub Pages, Actions-Cron erneuert die statische `live.json` alle ~5 Minuten
 * [ ] Offizielle Datenquelle der Stadt statt Scraping (Voraussetzung für Produktivbetrieb)
 * [ ] Impressum & Datenschutzerklärung
 * [ ] Offizielles Corporate Design der Landeshauptstadt München
@@ -99,6 +99,12 @@ graph TD;
 └── public/
     └── parkhaeuser.json    24 Parkhäuser: Name, Adresse, Koordinaten, Betreiber-URL
 ```
+
+### Deployment
+
+Die Seite wird per GitHub Actions ([`deploy-pages.yml`](.github/workflows/deploy-pages.yml)) nach GitHub Pages deployt: **https://it-at-m.github.io/liveparking/**
+
+Der Workflow läuft bei jedem Push auf `main` sowie per Cron alle 5 Minuten. Dabei baut er das Frontend und erzeugt über `scripts/build-livedata.mjs` (nutzt denselben Parser wie der lokale Proxy) eine statische `live.json`. Im Pages-Betrieb liest das Frontend diese Datei statt `/api/live`; Datenstände älter als 15 Minuten werden in der Statuszeile als verzögert gekennzeichnet. GitHub führt Schedules mit einigen Minuten Verzögerung aus – die Daten sind auf Pages also typischerweise 5–10 Minuten alt, lokal mit Proxy 60 Sekunden.
 
 ### Datenquellen
 

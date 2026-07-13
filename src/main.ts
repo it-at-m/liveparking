@@ -8,6 +8,11 @@ import { aktualisierePanel, oeffnePanel, offenesPanelSn, schliessePanel } from "
 import { renderListe } from "./liste";
 
 const REFRESH_MS = 60_000;
+// Dev: lokaler Proxy (60 s frisch). Pages-Deployment: statische live.json,
+// die der Actions-Cron alle ~5 Minuten erneuert.
+const LIVE_URL = import.meta.env.DEV ? "/api/live" : "live.json";
+// Ab diesem Datenalter wird der Stand als veraltet markiert (Cron-Verzögerungen).
+const VERALTET_MS = 15 * 60_000;
 const KARTEN_STIL = "https://tiles.openfreemap.org/styles/positron";
 const ZENTRUM: [number, number] = [11.5665, 48.1385];
 
@@ -87,7 +92,7 @@ function aktualisiereAnsichten() {
 
 async function ladeLiveDaten() {
   try {
-    const res = await fetch("/api/live");
+    const res = await fetch(`${LIVE_URL}?t=${Date.now()}`);
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const daten = (await res.json()) as LiveDaten;
     liveBySn = new Map(daten.parkhaeuser.map((p) => [p.sn, p]));
@@ -97,8 +102,11 @@ async function ladeLiveDaten() {
       hour: "2-digit",
       minute: "2-digit",
     });
+    const alterMs = Date.now() - new Date(daten.abgerufen).getTime();
     if (daten.stale) {
       setzeStatusPill("warnung", `Quelle nicht erreichbar – letzter Stand ${stand} Uhr`);
+    } else if (alterMs > VERALTET_MS) {
+      setzeStatusPill("warnung", `Aktualisierung verzögert – Stand ${stand} Uhr`);
     } else {
       setzeStatusPill("ok", `Stand ${stand} Uhr · ${daten.gesamt.frei.toLocaleString("de-DE")} Plätze frei`);
     }
@@ -207,7 +215,7 @@ function zeigeStandort(map: maplibregl.Map) {
 // ---------- Start ----------
 
 async function start() {
-  standorte = (await (await fetch("/parkhaeuser.json")).json()) as Standort[];
+  standorte = (await (await fetch("parkhaeuser.json")).json()) as Standort[];
 
   const map = new maplibregl.Map({
     container: "map",
