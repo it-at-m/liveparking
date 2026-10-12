@@ -2,3 +2,4 @@
 dist
 node_modules
 route-map.d.ts
+public/map
