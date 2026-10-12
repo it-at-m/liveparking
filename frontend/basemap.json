@@ -1,0 +1,9 @@
+{
+  "bbox": [11.33, 48.04, 11.75, 48.27],
+  "minzoom": 8,
+  "maxzoom": 15,
+  "source": "https://build.protomaps.com/20261010.pmtiles",
+  "file": "muenchen-20261010.pmtiles",
+  "url": "https://github.com/it-at-m/parkhausradar/releases/download/basemap-20261010/muenchen-20261010.pmtiles",
+  "sha256": "d3e281e18d9a985de8c4ee6b1a5a1581af761bf5575c0886a96e268e74449767"
+}

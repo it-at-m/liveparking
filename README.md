@@ -37,6 +37,18 @@ TBD
 
 TBD
 
+### Basemap
+
+The map is served entirely from our own server, so no request of a citizen reaches a third party. It is a [PMTiles](https://docs.protomaps.com/pmtiles/) extract of the [Protomaps basemap](https://github.com/protomaps/basemaps) for the city of Munich, generated from OpenStreetMap.
+
+The tileset (~36 MB) is too large for Git. It is published as an asset of a GitHub release and referenced in [`frontend/basemap.json`](frontend/basemap.json) by URL and SHA-256 checksum. `npm run build` and `npm run dev` download it into `frontend/public/map/` and abort if the checksum does not match.
+
+To update the basemap:
+
+1. Run `scripts/build-basemap.sh <YYYYMMDD>` in `frontend/` with a build date from [maps.protomaps.com/builds](https://maps.protomaps.com/builds). It requires the [pmtiles CLI](https://github.com/protomaps/go-pmtiles) and updates `basemap.json`.
+2. Create the release `basemap-<YYYYMMDD>` with the generated file as asset. Do not mark it as latest release, and state the license in the release notes (ODbL, © OpenStreetMap contributors, source build).
+3. Open a pull request with the updated `basemap.json` and check the map visually before merging.
+
 ## Contributing
 
 Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
@@ -57,6 +69,8 @@ More about this in the [CODE_OF_CONDUCT](/CODE_OF_CONDUCT.md) file.
 ## License
 
 Distributed under the MIT License. See [LICENSE](LICENSE) file for more information.
+
+The basemap data and icons in `frontend/public/map/` are third-party content under their own licenses (ODbL, MIT). See [`frontend/public/map/LICENSE.md`](frontend/public/map/LICENSE.md).
 
 
 ## Contact

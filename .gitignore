@@ -14,3 +14,5 @@ cache/
 coverage
 .env.local
 .env.*.local
+frontend/public/map/*.pmtiles
+frontend/public/map/*.pmtiles.part
