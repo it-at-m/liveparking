@@ -3,3 +3,14 @@ dist/
 .claude/
 *.log
 .DS_Store
+__pycache__/
+*.egg-info/
+.venv/
+route-map.d.ts
+.vite
+cache/
+*.tsbuildinfo
+.eslintcache
+coverage
+.env.local
+.env.*.local
